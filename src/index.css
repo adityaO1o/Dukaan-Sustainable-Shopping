@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 74 56% 95%;
+    --foreground: 155 42% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 42% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 42% 18%;
+
+    --primary: 155 36% 30%;
+    --primary-foreground: 64 65% 88%;
+
+    --secondary: 32 51% 62%;
+    --secondary-foreground: 155 42% 18%;
+
+    --muted: 64 65% 88%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 32 51% 62%;
+    --accent-foreground: 155 42% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 30% 85%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 155 36% 30%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 155 42% 18%;
+    --foreground: 64 65% 88%;
+
+    --card: 155 36% 25%;
+    --card-foreground: 64 65% 88%;
+
+    --popover: 155 36% 25%;
+    --popover-foreground: 64 65% 88%;
+
+    --primary: 155 30% 40%;
+    --primary-foreground: 64 65% 88%;
+
+    --secondary: 32 51% 52%;
+    --secondary-foreground: 64 65% 88%;
+
+    --muted: 155 36% 30%;
+    --muted-foreground: 215 20.2% 75.1%;
+
+    --accent: 32 51% 52%;
+    --accent-foreground: 64 65% 88%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 64 65% 88%;
+
+    --border: 155 36% 30%;
+    --input: 155 36% 30%;
+    --ring: 64 65% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+}
+
+@layer components {
+  .eco-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-eco-green-light text-white;
+  }
+  
+  .eco-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
